@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary theme colors - Purple neon (#7303c0) */
+  --primary: 271 97% 38%;
+  --primary-foreground: 0 0% 100%;
+  --primary-50: 271 97% 97%;
+  --primary-100: 271 97% 94%;
+  --primary-200: 271 97% 85%;
+  --primary-300: 271 97% 75%;
+  --primary-400: 271 97% 55%;
+  --primary-500: 271 97% 38%;
+  --primary-600: 271 97% 30%;
+  --primary-700: 271 97% 25%;
+  --primary-800: 271 97% 20%;
+  --primary-900: 271 97% 15%;
+  
+  /* Secondary theme colors - Cyan (#38caec) */
+  --secondary: 195 83% 57%;
+  --secondary-foreground: 0 0% 0%;
+  --secondary-50: 195 83% 97%;
+  --secondary-100: 195 83% 94%;
+  --secondary-200: 195 83% 85%;
+  --secondary-300: 195 83% 75%;
+  --secondary-400: 195 83% 65%;
+  --secondary-500: 195 83% 57%;
+  --secondary-600: 195 83% 47%;
+  --secondary-700: 195 83% 37%;
+  --secondary-800: 195 83% 27%;
+  --secondary-900: 195 83% 17%;
+  
+  /* Accent theme colors - Neon Green (#00ff9d) */
+  --accent: 157 100% 50%;
+  --accent-foreground: 0 0% 0%;
+  --accent-50: 157 100% 97%;
+  --accent-100: 157 100% 94%;
+  --accent-200: 157 100% 85%;
+  --accent-300: 157 100% 75%;
+  --accent-400: 157 100% 65%;
+  --accent-500: 157 100% 50%;
+  --accent-600: 157 100% 40%;
+  --accent-700: 157 100% 30%;
+  --accent-800: 157 100% 20%;
+  --accent-900: 157 100% 15%;
+  
+  /* System Colors */
+  --success: 142 72% 29%;
+  --success-foreground: 210 40% 98%;
+  --success-muted: 142 72% 90%;
+  --warning: 38 92% 50%;
+  --warning-foreground: 48 96% 98%;
+  --warning-muted: 38 92% 90%;
+  --error: 0 84% 60%;
+  --error-foreground: 210 40% 98%;
+  --error-muted: 0 84% 90%;
+  --info: 195 83% 57%;
+  --info-foreground: 0 0% 0%;
+  --info-muted: 195 83% 90%;
+  
+  /* Surface Colors - Light Mode (will be overridden in dark mode) */
+  --surface: 0 0% 100%;
+  --surface-foreground: 240 30% 15%;
+  --surface-muted: 240 20% 96%;
+  --background: 0 0% 100%;
+  --foreground: 240 30% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 30% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 30% 15%;
+  --muted: 240 20% 96%;
+  --muted-foreground: 240 10% 45%;
+  
+  /* Gaming-specific neon colors */
+  --neon-purple: 271 97% 38%; /* #7303c0 */
+  --neon-pink: 324 84% 57%;   /* #ec38bc */
+  --neon-green: 157 100% 50%; /* #00ff9d */
+  --neon-cyan: 195 83% 57%;   /* #38caec */
+  --neon-red: 347 100% 59%;   /* #ff2e63 */
+  
+  /* Glassmorphism variables */
+  --glass: 240 30% 15% / 0.1;
+  --glass-light: 240 30% 15% / 0.05;
+  --glass-dark: 240 30% 15% / 0.3;
+  
+  /* System Variables */
+  --border: 240 30% 92%;
+  --input: var(--border);
+  --ring: var(--primary);
+  --radius: 0.5rem;
+  --angle: 90deg;
+}
+
+.dark {
+  /* Dark theme base colors */
+  --background: 240 30% 8%;    /* #0f0f1a */
+  --foreground: 240 10% 95%;   /* #f0f0f5 */
+  
+  /* Card and surface colors */
+  --card: 240 30% 10%;         /* #1a1a2e */
+  --card-foreground: 240 10% 95%;
+  --popover: 240 30% 10%;      /* #1a1a2e */
+  --popover-foreground: 240 10% 95%;
+  --surface: 240 30% 10%;      /* #1a1a2e */
+  --surface-foreground: 240 10% 95%;
+  --surface-muted: 240 30% 15%;
+  
+  /* Theme colors in dark mode */
+  --primary: 271 97% 50%;      /* Enhanced purple */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 195 83% 65%;    /* Enhanced cyan */
+  --secondary-foreground: 0 0% 0%;
+  --accent: 157 100% 60%;      /* Enhanced green */
+  --accent-foreground: 0 0% 0%;
+  
+  /* Muted colors */
+  --muted: 240 30% 20%;        /* Darker muted background */
+  --muted-foreground: 240 10% 70%;
+  
+  /* System colors in dark mode */
+  --border: 240 30% 20%;       /* Darker border */
+  --input: 240 30% 20%;
+  --ring: 271 97% 50%;
+  
+  /* Status colors in dark mode */
+  --success: 142 72% 45%;
+  --warning: 38 92% 55%;
+  --error: 0 84% 65%;
+  --info: 195 83% 65%;
+  
+  /* Glassmorphism in dark mode */
+  --glass: 240 30% 95% / 0.07;
+  --glass-light: 240 30% 95% / 0.03;
+  --glass-dark: 240 30% 95% / 0.15;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Button variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary-600 px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary-600 px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-accent-foreground hover:bg-accent-600 px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .btn-outline {
+    @apply border border-input bg-background hover:bg-muted px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .btn-ghost {
+    @apply hover:bg-muted px-4 py-2 rounded-md transition-colors;
+  }
+  
+  /* Card variants */
+  .card-standard {
+    @apply bg-card text-card-foreground rounded-lg border shadow-sm p-6;
+  }
+  
+  .card-glass {
+    @apply bg-glass backdrop-blur-md rounded-lg border border-white/10 shadow-glass p-6;
+  }
+  
+  /* Gaming-specific components */
+  .neon-border {
+    @apply relative rounded-md;
+    box-shadow: 0 0 5px theme(colors.neon.purple), 0 0 20px theme(colors.neon.purple);
+  }
+  
+  .neon-border-pink {
+    @apply relative rounded-md;
+    box-shadow: 0 0 5px theme(colors.neon.pink), 0 0 20px theme(colors.neon.pink);
+  }
+  
+  .neon-border-green {
+    @apply relative rounded-md;
+    box-shadow: 0 0 5px theme(colors.neon.green), 0 0 20px theme(colors.neon.green);
+  }
+  
+  .neon-border-cyan {
+    @apply relative rounded-md;
+    box-shadow: 0 0 5px theme(colors.neon.cyan), 0 0 20px theme(colors.neon.cyan);
+  }
+  
+  .game-card {
+    @apply bg-card text-card-foreground rounded-lg border border-white/10 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-neon-purple;
+  }
+  
+  .game-card-featured {
+    @apply bg-gradient-game from-primary-900 via-primary-800 to-primary-900 text-white rounded-lg border border-primary-700 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-neon-purple;
+  }
+  
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-md transition-colors hover:bg-muted text-foreground hover:text-primary;
+  }
+  
+  .sidebar-item-active {
+    @apply flex items-center gap-3 px-4 py-3 rounded-md bg-primary/10 text-primary font-medium;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  .text-glow-lg {
+    text-shadow: 0 0 20px currentColor;
+  }
+  
+  .glassmorphism {
+    background: rgba(26, 26, 46, 0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glassmorphism-light {
+    background: rgba(26, 26, 46, 0.4);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
